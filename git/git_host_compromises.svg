@@ -14,7 +14,10 @@
    id="svg2"
    version="1.1"
    inkscape:version="0.48.3.1 r9886"
-   sodipodi:docname="git_host_compromises.svg">
+   sodipodi:docname="git_host_compromises.svg"
+   inkscape:export-filename="/home/amy/talks.git/git/git_host_compromises.png"
+   inkscape:export-xdpi="100"
+   inkscape:export-ydpi="100">
   <defs
      id="defs4">
     <clipPath
@@ -23,6 +26,13 @@
          id="path3001"
          d="M 0,700 700,700 700,0 0,0 0,700 z"
          inkscape:connector-curvature="0" />
+    </clipPath>
+    <clipPath
+       id="clipPath2999-3">
+      <path
+         inkscape:connector-curvature="0"
+         d="M 0,700 700,700 700,0 0,0 0,700 z"
+         id="path3001-3" />
     </clipPath>
   </defs>
   <sodipodi:namedview
@@ -55,7 +65,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title />
+        <dc:title></dc:title>
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -193,29 +203,6 @@
          id="drop"
          inkscape:connector-curvature="0"
          style="fill:#9cdaf1" />
-    </g>
-    <g
-       id="g3954"
-       transform="matrix(0.49011309,0,0,0.49011309,-70.68534,22.018756)">
-      <rect
-         ry="22.857143"
-         y="671.21936"
-         x="373.71429"
-         height="135.71428"
-         width="211.42857"
-         id="rect3948"
-         style="fill:none;stroke:#1a1a1a;stroke-width:16.32276344;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0" />
-      <text
-         sodipodi:linespacing="125%"
-         id="text3950"
-         y="702.36218"
-         x="382.85715"
-         style="font-size:28px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Serif;-inkscape-font-specification:Serif"
-         xml:space="preserve"><tspan
-           y="702.36218"
-           x="382.85715"
-           id="tspan3952"
-           sodipodi:role="line">$ git clone ...</tspan></text>
     </g>
     <g
        id="layer1-7"
@@ -409,6 +396,78 @@
              id="path3258" />
         </g>
       </g>
+    </g>
+    <g
+       transform="matrix(0.20102205,0,0,0.20102205,131.08313,315.15474)"
+       id="layer1-0"
+       inkscape:label="Layer 1">
+      <g
+         transform="matrix(1.9892549,0,0,1.9892549,-629.81269,-1149.4167)"
+         id="g3954-8">
+        <path
+           sodipodi:nodetypes="ssssssssssssssssss"
+           inkscape:connector-curvature="0"
+           id="rect3948-2"
+           d="m 284.18908,661.81551 c -8.65043,0 -11.4922,8.16352 -11.4922,14.78272 l 0,134.5 c 0,6.6192 5.3808,12 12,12 l 228,0 c 6.6192,0 12,-5.3808 12,-12 l 0,-134.5 c 0,-6.6192 -2.84178,-14.78272 -12,-14.78272 z m 0.5078,6.78272 228,0 c 4.4608,0 7.96875,3.5392 7.96875,8 l 0,134.5 c 0,4.4608 -3.50795,8 -7.96875,8 l -228,0 c -4.4608,0 -8,-3.5392 -8,-8 l 0,-134.5 c 0,-4.4608 3.5392,-8 8,-8 z"
+           style="font-size:medium;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-indent:0;text-align:start;text-decoration:none;line-height:normal;letter-spacing:normal;word-spacing:normal;text-transform:none;direction:ltr;block-progression:tb;writing-mode:lr-tb;text-anchor:start;baseline-shift:baseline;color:#000000;fill:#1a1a1a;fill-opacity:1;stroke:none;stroke-width:4.02160645;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate;font-family:Sans;-inkscape-font-specification:Sans" />
+        <text
+           transform="matrix(0.50270079,0,0,0.50270079,225.46153,626.86444)"
+           sodipodi:linespacing="125%"
+           id="text3516"
+           y="47.161537"
+           x="502.04581"
+           style="font-size:28px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Serif;-inkscape-font-specification:Serif"
+           xml:space="preserve"><tspan
+             y="47.161537"
+             x="502.04581"
+             id="tspan3518"
+             sodipodi:role="line" /></text>
+        <g
+           transform="translate(-99.021873,-4.6205243)"
+           id="g3536">
+          <text
+             sodipodi:linespacing="125%"
+             id="text3950-4"
+             y="702.36218"
+             x="382.85715"
+             style="font-size:28px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Serif;-inkscape-font-specification:Serif"
+             xml:space="preserve"><tspan
+               y="702.36218"
+               x="382.85715"
+               id="tspan3952-1"
+               sodipodi:role="line"
+               style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Ubuntu Mono;-inkscape-font-specification:Ubuntu Mono">$ whoami</tspan><tspan
+               y="737.36218"
+               x="382.85715"
+               sodipodi:role="line"
+               style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Ubuntu Mono;-inkscape-font-specification:Ubuntu Mono"
+               id="tspan3514">tron</tspan><tspan
+               y="772.36218"
+               x="382.85715"
+               sodipodi:role="line"
+               style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Ubuntu Mono;-inkscape-font-specification:Ubuntu Mono"
+               id="tspan3512">$ git clone</tspan></text>
+          <rect
+             style="fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:4.02160645;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0"
+             id="rect3520"
+             width="10.156089"
+             height="17.26535"
+             x="550.94373"
+             y="754.17487"
+             rx="0.76923078"
+             ry="0.79069757" />
+        </g>
+      </g>
+      <path
+         inkscape:connector-curvature="0"
+         id="path4192-2"
+         d=""
+         style="fill:#000000" />
+      <path
+         inkscape:connector-curvature="0"
+         id="path4190-1"
+         d=""
+         style="fill:#000000" />
     </g>
   </g>
 </svg>
