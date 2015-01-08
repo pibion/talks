@@ -1,0 +1,58 @@
+# Slide 1
+We're moving to the MIDAS DAQ, which offers an http interface for many core operations.  
+This means we can build a DAQ that's a web application.
+We're aiming to build a DAQ for both the test facilities and also for the installed experiement at SNOlab.
+
+# Slide 2
+The basic idea is to build a DAQ that gives a simple run-control interface and also provides the flexibility needed by the test facilites.
+Building an application in html and javascript should increase the number of potential maintainers and make it more version-controllable than labview DAQs.
+
+# Slide 3: Why one DAQ: Keep it short!!
+One DAQ for all the tests facilities and for SNOlab is a better use of resources **if** that DAQ is actually usable.
+
+# Slide 4: Why a Web App: Keep it short!!
+Web application: installable on many systems and maintainable.
+
+# Slide 5
+The fundamental problem is that we're building the DAQ - and we're not a test facility.  For the DAQ to end up "flexible, functional, and clear," its design must be driven by the test facilites.
+
+Joel has worked hard for initial suggestions, and our current DAQ is based on discussions with Hassan, Matt, and Bruno.
+
+Designing a working DAQ isn't a one-shot task; some things are obvious (start/stop run), but other things are not (an editable settings display can lead to confusion - does that number mean that's the value set on the detector, or that you've attempted to change it to that value?).
+
+Perhaps this would be a good time to request communication in any and all formats?
+
+# So what do we have so far?
+
+# Slide 6: unambiguous displays
+Point out that the tabs lead to undeveloped sections of the DAQ - all sections that are in need of direction.
+
+Settings display has been our primary focus.
+
+The most consistent/persistent/adamant feedback so far has been: it should be clear what the detector state is.  The existing DAQ does not show the *actual* value; it shows the set value.  This is a huge problem.
+
+We've built displays that are fed exclusively from the database holding values read from the DCRC board.
+
+There are currently two different modes for changing detector settings.  One is a slower change that asks for confirmation before submitting (show popup).  The other is a "live" change that immediately submits the change to MIDAS.  None of the changes are made on the display values - they're done on popups or other controls, and the display eventually reflects that the change has gone through.
+
+# Slide 7: 
+# settings
+Saving, retrieving, and applying settings is another frequent need - for running, tuning, etc.  Since many obvious DAQ operations (data running, tuning, flash, etc.) need a mechanism for saving and applying settings, we've hacked up a database that lets us start building controls for settings.
+
+(Show setting loading?)
+
+# flash
+(Select flash tab) 
+Implementing a flash is a good shake-down for settings and also run control.  This is what we're beginning to focus on.  Again, we need your help!
+
+# slide 8
+We aim to make a DAQ that does everything the test facilities need.
+
+We also aim to make the DAQ easily customizable and extendible - this allows test facilities to customize (with reasonable time/resources).  It also allows us to implement a requested change quickly.
+
+(add button to load named settings file?)
+
+# Slide 9: conclusion
+The tricky part of building this DAQ is not the code - it's getting and incorporating the experience at the test facilities.
+
+We want to get something out to you that's usable so we can start discussing features and improvements *now*.
