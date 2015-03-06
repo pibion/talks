@@ -1,0 +1,24 @@
+# bitbucket 
+
+Bitbucket shows all the repositories of an organization in one, long list.
+
+Many people have requested the ability to organize these into folders, but there's no sign of progress on this ().
+
+I thought that I might be able to use the bitbucket API to get a list of repositories - with the idea that we could make a simple webpage that listed the repositories in folders and linked to the bitbucket URL for those repositories.
+
+This is possible for repositories owned by the superCDMS organization.
+
+I had also hoped it would be possible for someone to share an individual repository with the superCDMS organization - this seemed like an easy way to share work that might be of interest to others in the collaboration without adding to the cluttered repository list.  However, the API query only returns the repositories owned by a particular user, not all repositories the user has write privelages on.
+
+
+# self hosting
+
+GitLab organizes repositories by team (or something).  In addition, self hosting would mean we'd have the repositories on disk and could easily make some kind of organized list.
+
+A thread discussing self-hosting solutions (https://news.ycombinator.com/item?id=7627165) has a few clear themes: many people use gitlab; gitlab used to be a pain to install but is much-improved now that there's a bundled package; there are some lesser-known alternatives such as gogs and gitblit.
+
+Gogs is github clone written in go and is notable because it's intent is to be very easy to install and configure.  Indeed, I was able to install and configure gogs on my laptop without much trouble.  It really is a github clone, though; its organization of the repositories is not an improvement over bitbucket.  Pass.
+
+I have not yet installed gitlab - not because I ran into problems, just because I tried a few other git servers first.  
+
+While gitlab repository organization is an improvement over other git servers, it would be nice to add some additional customization.  Gitlab is a ruby-on-rails application and the source code is reasonably readable, so this is not outside the realm of possibility.  However, customization merge requests are typically turned down: changes we make would likely not become accepted as part of the main code base.  This could pose a problem if we ever need to update our gitlab installation - for example, to address serious ssl vulnerabilities.  
