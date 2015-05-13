@@ -1,0 +1,28 @@
+div.container {
+    display: flex;
+    align-items: baseline;
+}
+
+div.content {
+    display: flex;
+    flex-direction: column;
+}
+
+div.content + div.content {
+    margin-left: 10%;
+}
+
+details + details {
+    margin-top: 3%
+}
+
+summary {
+    background-color: #CCCC99;
+    padding-left: 2%;
+    padding-right: 2%;
+    border-radius: 2px;
+}
+
+summary * {
+    display: inline-block;
+}
