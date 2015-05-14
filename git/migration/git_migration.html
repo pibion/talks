@@ -1,11 +1,19 @@
 <!DOCTYPE html>
 <html>
 <link rel="stylesheet" type="text/css" href="git_migration.css">
-<title>Git Migration</title>
+<title>DAQ Git Migration</title>
 
 <xmp theme="united" style="display:none;">
-<div class="container">
-  <div class="content">
+  CDMS will be switching to git for version control.  Now that the software group has decided to host the repositories on the Stanford cluster (as was done for CVS and SVN), migration is moving forward.
+
+  Code repositories (and other repositories, like papers) are located in the /data/git/ directory on SUF.  The repositories are browsable at http://titus.stanford.edu:8080/git/.
+  
+  Additional documentation explaining how to work with the repositories is available at [the confluence git page](https://confluence.slac.stanford.edu/display/CDMS/Working+with+the+Software+Repositories).  
+
+  <br><br>
+    
+  <div class="amy-container">
+  <div class="amy-content">
     <h2> Git is different. </h2>
     <ol>
       <li> Each project gets its own repository. </li>
@@ -13,13 +21,14 @@
     </ol>
   </div>
 
-  <div class="content" id="questions">
+  <div class="amy-content" id="questions">
     <details>
       <summary><h4> Q: When do we switch to git? </h4></summary>
       <p>
 	Conversion of each CVS (or SVN) project is being done on a per-project basis.
-	<br>
-	So, when is best for the DAQ software?  "Never" is an option, but I'd prefer to avoid it.
+      </p>
+      <p>
+	So, when is best for the DAQ software?  "Never" is *technically* an option, but I'd prefer to avoid it.
       </p>
     </details>
 
@@ -27,7 +36,8 @@
       <summary><h4> Q: How do I access the new repository? </h4></summary>
       <p>
 	Your existing ssh access to the Stanford computers (nero, galba, etc.) should allow cloning the repositories.
-
+      </p>
+      <p>
 	The following command specifies the port - necessary unless your ssh is configured to connect to the correct port on the Stanford cluster.
 	<br>
 	`thor@yodenheim ~ $ git clone ssh://thor@nero.stanford.edu:26/data/git/test_repo.git`
@@ -38,8 +48,8 @@
       <summary><h4> Q: How do I commit changed code? </h4></summary>
       <p>
 	Unlike CVS or SVN, git distinguishes between commiting changes and sharing those changes.
-	<br>
-	<br>
+	</p>
+	<p>
 	To **commit changes** to your local repository, use `git add` to tell git which changes to include in this commit:
 	<br>
 	`thor@yodenheim ~/test_repo.git $ git add file1.txt file3.txt readme.md`
@@ -47,53 +57,68 @@
 	`thor@yodenheim ~/test_repo.git $ git commit`
 	<br>
 	Changes not included with `git add` are simply left alone by git.  If a file hasn't been tracked before `git add`, git-adding it will cause git to start tracking it.
-	<br>
-	<br>
+	</p>
+	<p>
 	To **share changes**, use `git push` to update the remote repository.
 	<br>
 	`thor@yodenheim ~/test_repo.git $ git push`
 	<br>
 	This command is simple because git adds the remote information when cloning the repository.  The settings file is `.git/config`, located in the top level of the repository directory.
-	<br>
-	<br>
+	</p>
 	
 	<details>
 	  <summary> shortcuts when git-adding </summary>
-	  Adding changed files by hand is sometimes inconvenient.  Pattern matching works as expected:
+	  <p>
+	  Adding changed files by hand is sometimes inconvenient.  Pattern matching works as expected: the following will add all the SVG files in the figures directory.
 	  <br>
 	  `git add figures/*.svg`
-	  <br>
-	  will add all the SVG files in the figures directory.
-	  <br>
-	  <br>
+	  </p>
+	  <p>
 	  Frequently, I want to commit all the changes I've made to tracked files.  This can be done with
 	  <br>
 	  `git commit -a`
-	  <br>
+	  </p>
 	</details>
     
 	<details>
 	  <summary> errors when git-pushing </summary>
+	  <p>
 	  If someone else has pushed new changes to the repository and you don't have them yet, git will complain when you attempt to push.  This is by far the most common error encountered when working with git.  Git requires that you update your repository before pushing:
 	  <br>
 	  `thor@yodenheim ~/test_repo.git $ git pull`
 	  <br>
 	  `thor@yodenheim ~/test_repo.git $ git push`
-	  <br>
+	  </p>
+	  <p>
 	  In principle, `git pull` can result in a merge conflict - if you and another person have been editing the same part of a file.  In practice, this almost never arises.  But if it does, rest easy - git will not overwrite your changes.  See (link to how-to-deal-with-conflicts.md) for guidance on resolving the conflict.
+	  </p>
 	</details>
     </details>
 
     <details>
       <summary><h4> Q: How do I do XYZ with git? </h4></summary>
+      <p>
       Explanations of frequent use cases have a home at (useful link here).  Do feel free to contact your Local Git Expert (Amy or Anthony) with questions.
-      <br>
-      You shouldn't ever need to rebase.  Don't rebase.  Instead, contact Amy.
+      </p>
+      <p>
+      You shouldn't ever need to rebase.  Don't rebase.  If you think rebasing might be appropriate, contact Amy.
+      </p>
     </details>
 
     <details>
       <summary><h4> Q: Git can be ... dangerous? </h4></summary>
+      <p>
       Git provides commands that can rewrite the history of a repository - quite dangerous.
+      </p>
+      <p>
+      There are two ways to change history: rebasing, and deleting a branch.  Neither of these are performed as a side effect to other commands; they must be explicitly invoked.  Avoiding history change to your local repository happens automatically if you avoid rebasing and branch deletion.  I never rebase - and many distributed version control programs do not allow rebasing (mercurial, anyone?).  But some people find branch deletion quite useful.  For more information on branches, see (link to git-branching.md).
+      </p>
+      <p>
+      So you can avoid changing the history of your repository.  That's all well and good, but what if someone else changes the history in their copy of the repository and then pushes their messed-up version to the remote?
+      </p>
+      <p>
+      Git provides a never-delete setting for those wishing to avoid history changes on the remote repository.  I suggest that we use the never-delete setting for all the DAQ repositories.
+      </p>
     </details>
   </div>
 </div>

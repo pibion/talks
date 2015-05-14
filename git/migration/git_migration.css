@@ -1,14 +1,14 @@
-div.container {
+div.amy-container {
     display: flex;
     align-items: baseline;
 }
 
-div.content {
+div.amy-content {
     display: flex;
     flex-direction: column;
 }
 
-div.content + div.content {
+div.amy-content + div.amy-content {
     margin-left: 7%;
 }
 
