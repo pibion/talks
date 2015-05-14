@@ -6,6 +6,7 @@ div.amy-container {
 div.amy-content {
     display: flex;
     flex-direction: column;
+    width: 30%;
 }
 
 div.amy-content + div.amy-content {
