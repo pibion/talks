@@ -9,7 +9,7 @@ div.content {
 }
 
 div.content + div.content {
-    margin-left: 10%;
+    margin-left: 7%;
 }
 
 details + details {
@@ -25,4 +25,8 @@ summary {
 
 summary * {
     display: inline-block;
+}
+
+#questions {
+    width: 60%;
 }

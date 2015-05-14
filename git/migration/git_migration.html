@@ -6,26 +6,94 @@
 <xmp theme="united" style="display:none;">
 <div class="container">
   <div class="content">
-    <h2> Git particulars to keep in mind: </h2>
+    <h2> Git is different. </h2>
     <ol>
       <li> Each project gets its own repository. </li>
       <li> Your local directory is its own, complete repository. </li>
     </ol>
   </div>
 
-  <div class="content">
+  <div class="content" id="questions">
     <details>
       <summary><h4> Q: When do we switch to git? </h4></summary>
       <p>
-	Whenever's best for you.  But not "never."
+	Conversion of each CVS (or SVN) project is being done on a per-project basis.
+	<br>
+	So, when is best for the DAQ software?  "Never" is an option, but I'd prefer to avoid it.
       </p>
     </details>
 
     <details>
       <summary><h4> Q: How do I access the new repository? </h4></summary>
       <p>
-	`git clone`
+	Your existing ssh access to the Stanford computers (nero, galba, etc.) should allow cloning the repositories.
+
+	The following command specifies the port - necessary unless your ssh is configured to connect to the correct port on the Stanford cluster.
+	<br>
+	`thor@yodenheim ~ $ git clone ssh://thor@nero.stanford.edu:26/data/git/test_repo.git`
       </p>
+    </details>
+
+    <details>
+      <summary><h4> Q: How do I commit changed code? </h4></summary>
+      <p>
+	Unlike CVS or SVN, git distinguishes between commiting changes and sharing those changes.
+	<br>
+	<br>
+	To **commit changes** to your local repository, use `git add` to tell git which changes to include in this commit:
+	<br>
+	`thor@yodenheim ~/test_repo.git $ git add file1.txt file3.txt readme.md`
+	<br>
+	`thor@yodenheim ~/test_repo.git $ git commit`
+	<br>
+	Changes not included with `git add` are simply left alone by git.  If a file hasn't been tracked before `git add`, git-adding it will cause git to start tracking it.
+	<br>
+	<br>
+	To **share changes**, use `git push` to update the remote repository.
+	<br>
+	`thor@yodenheim ~/test_repo.git $ git push`
+	<br>
+	This command is simple because git adds the remote information when cloning the repository.  The settings file is `.git/config`, located in the top level of the repository directory.
+	<br>
+	<br>
+	
+	<details>
+	  <summary> shortcuts when git-adding </summary>
+	  Adding changed files by hand is sometimes inconvenient.  Pattern matching works as expected:
+	  <br>
+	  `git add figures/*.svg`
+	  <br>
+	  will add all the SVG files in the figures directory.
+	  <br>
+	  <br>
+	  Frequently, I want to commit all the changes I've made to tracked files.  This can be done with
+	  <br>
+	  `git commit -a`
+	  <br>
+	</details>
+    
+	<details>
+	  <summary> errors when git-pushing </summary>
+	  If someone else has pushed new changes to the repository and you don't have them yet, git will complain when you attempt to push.  This is by far the most common error encountered when working with git.  Git requires that you update your repository before pushing:
+	  <br>
+	  `thor@yodenheim ~/test_repo.git $ git pull`
+	  <br>
+	  `thor@yodenheim ~/test_repo.git $ git push`
+	  <br>
+	  In principle, `git pull` can result in a merge conflict - if you and another person have been editing the same part of a file.  In practice, this almost never arises.  But if it does, rest easy - git will not overwrite your changes.  See (link to how-to-deal-with-conflicts.md) for guidance on resolving the conflict.
+	</details>
+    </details>
+
+    <details>
+      <summary><h4> Q: How do I do XYZ with git? </h4></summary>
+      Explanations of frequent use cases have a home at (useful link here).  Do feel free to contact your Local Git Expert (Amy or Anthony) with questions.
+      <br>
+      You shouldn't ever need to rebase.  Don't rebase.  Instead, contact Amy.
+    </details>
+
+    <details>
+      <summary><h4> Q: Git can be ... dangerous? </h4></summary>
+      Git provides commands that can rewrite the history of a repository - quite dangerous.
     </details>
   </div>
 </div>
