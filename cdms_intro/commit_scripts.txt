@@ -1,0 +1,3 @@
+cat detector_intro.html | sed -nr 's/.*"(\w+\.pdf)".*/\1/p' | xargs -n 1 git add
+cat detector_intro.html | sed -nr 's/.*src="(\w+\.svg)".*/\1/p' | xargs -n 1 git add
+cat detector_intro.html | sed -nr 's/.*data="(\w+\.pdf)".*/\1/p' | xargs -n 1 git add
