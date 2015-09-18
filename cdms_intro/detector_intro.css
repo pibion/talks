@@ -3,6 +3,16 @@ img, object {
   width: 400px;
   object-fit: contain;
 }
-th {
-    width: 300px;
+h1 {
+    border-bottom: 5px solid #222222;
+    font-size: 20pt;
+}
+table {
+    border-collapse: separate;
+}
+table th {
+    text-align: left;
+}
+.th-note {
+    width: 25em;
 }

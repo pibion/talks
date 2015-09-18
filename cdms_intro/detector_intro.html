@@ -8,7 +8,16 @@
 </head>
 
 <body>
-<section>
+  <section>
+    <h1>CDMS detectors: an introduction</h1>
+    This document aims to introduce the CDMS detectors: their sensors, their mechanical placement, and their circuitry.
+    <ol>
+    <li><a href="#sensors">phonon and charge sensors</a></li>
+    <li><a href="#shielding">getting to the detectors</a></li>
+    <li><a href="#signals">connecting to the signals</a></li>
+  </section>
+ 
+<section id="sensors">
 <h1>CDMS detectors: sensors</h1>
 When a particle deposits energy in a CDMS crystal, we measure the resulting phonon excitation and ionization. These two fundamentally different signals have two fundamentally different sensors.  The ionization sensors are relatively-simple metal pads, connected to a circuit that makes them sensitive to moving charge.  The phonon sensors use a thin strip of superconducting metal to acheive exquisite sensitivity.  The temperature of the superconducting strip is held right at its critical temperature, on the sharp edge of its superconducting transition.  A SQUID circuit is used to amplify the phonon signal. 
 
@@ -20,7 +29,7 @@ When a particle deposits energy in a CDMS crystal, we measure the resulting phon
 </colgroup>
 
 <tr class="sub-tab">
-<th>Phonon Signals</th>
+<th><div class="th-note">Phonon Signals</div></th>
 <td><figure>
 <img src="phonon_circuit.svg">
 <figcaption>
@@ -49,7 +58,7 @@ A schematic of the transition-edge sensor.  The superconducting strip of metal (
 </figure></td>
 
 <tr class="sub-tab">
-<th>Ionization Signals</th>
+<th><div class="th-note">Ionization Signals</div></th>
 <td><figure>
 <img src="charge_v1_web.svg">
 <figcaption>
@@ -77,7 +86,7 @@ A schematic of the transition-edge sensor.  The superconducting strip of metal (
 </section>
 
 
-<section>
+<section id="shielding">
 <h1>Getting from your office to the CDMS crystals.</h1>
 
 <table>
@@ -88,7 +97,7 @@ A schematic of the transition-edge sensor.  The superconducting strip of metal (
 </colgroup>
 
 <tr class="sub-tab">
-<th>Travel to Soudan, Minnesota.</th>
+<th><div class="th-note">Travel to Soudan, Minnesota.</div></th>
 <td><figure>
 <img src="underground-labs.jpg">
 <figcaption>
@@ -110,7 +119,7 @@ You're in the right spot.  The rust-colored structure is the elevator down to th
 </tr>
 
 <tr class="sub-tab">
-<th>The detectors are buried deep in the earth.</th>
+<th><div class="th-note">The detectors are buried deep in the earth.</div></th>
 <td><figure>
 <img src="P1270009.jpg">
 <figcaption>
@@ -132,7 +141,7 @@ Make yourself at home.  This image shows a cavern at the Homestake mine in weste
 </tr>
 
 <tr class="sub-tab">
-<th>We try to keep electronic noise away from the detectors</th>
+<th><div class="th-note">We try to keep electronic noise away from the detectors</div></th>
 <td><figure>
 <img src="PA280011.jpg">
 <figcaption>
@@ -142,7 +151,7 @@ The detectors are housed in an RF room that's kept clean with positive pressure.
 </tr>
 
 <tr class="sub-tab">
-<th>And we'd like to know when energetic, charged particles are passing through</th>
+<th><div class="th-note">And we'd like to know when energetic, charged particles are passing through</div></th>
 <td><figure>
 <img src="veto_top_shaded.svg">
 <figcaption>
@@ -164,7 +173,7 @@ Installing a scintillator detector.  The scintillator detectors are nearly three
 </tr>
 
 <tr class="sub-tab">
-<th>A layer of plastic, for neutrons</th>
+<th><div class="th-note">A layer of plastic, for neutrons</div></th>
 <td><figure>
 <img src="veto_top_shaded.svg">
 <figcaption>
@@ -192,7 +201,7 @@ The outer layer of polyethylene.  The thin, shiny mylar surrounds the surface of
 </tr>
 
 <tr class="sub-tab">
-<th>A layer of lead, for gammas.  Unfortunately, lead itself is radioactive, so this layer necessitates additional shielding layers!</th>
+<th><div class="th-note">A layer of lead, for gammas.  Unfortunately, lead itself is radioactive, so this layer necessitates additional shielding layers!</div></th>
 <td><figure>
 <img src="veto_top_shaded.svg">
 <figcaption>
@@ -214,7 +223,7 @@ The lead layer surrounding the detectors.  You can just see a hint of the outer 
 </tr>
 
 <tr class="sub-tab">
-<th>Another layer of plastic, for the neutrons produced by decays in the lead. </th>
+<th><div class="th-note">Another layer of plastic, for the neutrons produced by decays in the lead. </div></th>
 <td><figure>
 <img src="veto_top_shaded.svg">
 <figcaption>
@@ -230,7 +239,7 @@ The inner layer of polyethylene is much thinner than the outer layer.  The outer
 </tr>
 
 <tr class="sub-tab">
-<th>Special "mu-metal" keeps out magnetic fields.</th>
+<th><div class="th-note">Special "mu-metal" keeps out magnetic fields.</div></th>
 <td><figure>
 <img src="veto_top_shaded.svg">
 <figcaption>
@@ -246,7 +255,7 @@ The arms of the mu-metal shield are separate pieces to allow easy assembly of th
 </tr>
 
 <tr class="sub-tab">
-<th>And then there are <em>six</em> thin, copper "cans" at successively-lower temperatures.  The volume between the cans is kept under vacuum.  Standard cryostats typically have fewer hermetic temperature stages, made of stainless steel.  CDMS uses copper because low-radioactivity copper can be reliably sourced.  CDMS uses so many hermetic temperature stages because the cooling near the detectors is done not by direct contact with cryogenic fluids but instead by thermal contact with coldfingers.  This keeps the electronic noise associated with refrigeration further from the detectors, at the price of less cooling power.</th>
+<th><div class="th-note">And then there are <em>six</em> thin, copper "cans" at successively-lower temperatures.  The volume between the cans is kept under vacuum.  Standard cryostats typically have fewer hermetic temperature stages, made of stainless steel.  CDMS uses copper because low-radioactivity copper can be reliably sourced.  CDMS uses so many hermetic temperature stages because the cooling near the detectors is done not by direct contact with cryogenic fluids but instead by thermal contact with coldfingers.  This keeps the electronic noise associated with refrigeration further from the detectors, at the price of less cooling power.</div></th>
 <td><figure>
 <img src="russian-nesting-doll.jpg">
 <figcaption>
@@ -272,7 +281,7 @@ Shifters sit on a platform designed to allow access to the detectors.  The inner
 </tr>
 
 <tr class="sub-tab">
-<th>Copper cages are carefully suspended from the innermost can.</th>
+<th><div class="th-note">Copper cages are carefully suspended from the innermost can.</div></th>
 <td><figure>
 <object data="xsection_SUF.pdf" type="application/pdf">
   <p>It appears you don't have a PDF plugin for this browser.
@@ -292,7 +301,7 @@ Three detectors, still in their copper housing, are pulled from the icebox.  The
 </tr>
 
 <tr class="sub-tab">
-<th>And then, finally, we get to the detectors.</th>
+<th><div class="th-note">And then, finally, we get to the detectors.</div></th>
 <td><figure>
 <img src="144DPI_ZIPs_3.JPG">
 <figcaption>
@@ -305,20 +314,19 @@ Dissassmbling the copper housing, you'll finally get to the CDMS detectors.  Cur
 </table>
 
 
-<section>
+<section id="signals">
   <h1>Getting signal from the CDMS crystals out to you.</h1>
+The phonon and charge sensors are made on the surface of a crystal by combining masking, etching, and film deposition techniques.  A physicist who wishes to listen to the sensors needs to create an electrically-connected path from the sensor on the surface of the crystal out to the room.
+  
+  The following sites contain a wealth of information about the CDMS cold hardware:
 <a href="http://cdms.berkeley.edu/wiki/doku.php?id=coldhardware:table_of_useful_parameters">Useful parameters</a>
     <a href="http://titus.stanford.edu/cdms_restricted/Soudan/cryogenics/drawings/">Cryo drawings</a>
     <a href="http://cdms.berkeley.edu/cdms_restricted/coldhardware/html/description.html">Cold hardware</a>
 
 <table>
 <tbody>
-<colgroup>
-<col class="col-header">
-<col class="col-data">
-</colgroup>
 <tr class="sub-tab">
-      <th> Schematics for the sensor readouts of the CDMS detectors.  For both the phonon and charge schematics, the actual sensor is drawn as a variable resistor. </th>
+      <th><div class="th-note"> Schematics for the sensor readouts of the CDMS detectors.  For both the phonon and charge schematics, the actual sensor is drawn as a variable resistor. </div></th>
   <td><figure>
 <object data="PhononChannelDiagram.pdf" type="application/pdf">
   <p>It appears you don't have a PDF plugin for this browser.
@@ -342,7 +350,7 @@ Dissassmbling the copper housing, you'll finally get to the CDMS detectors.  Cur
 </tr>
 
 <tr class="sub-tab">
-  <th>From the detector sensor to pinouts attached to the copper housing.</th>
+  <th><div class="th-note">From the detector sensor to pinouts attached to the copper housing.</div></th>
 <td><figure>
 <img src="weld.png">
 <figcaption>
@@ -352,7 +360,7 @@ Gossamer metal wires carry electrical signal from the sensors on the detectors t
 </tr>
 
 <tr class="sub-tab">
-  <th> Connect the pins on the detector housing to the somewhat-distant heatsink tower. 
+  <th><div class="th-note"> Connect the pins on the detector housing to the somewhat-distant heatsink tower. 
       <td><figure>
 <img src="cimg3120.jpg">
 <figcaption>
@@ -386,7 +394,7 @@ The heat-sinking tower provides electrically connected paths that are in strong 
 </tr>
 
 <tr class="sub-tab">
-  <th>From the heat-sinking tower to the first amplification stage.</th>
+  <th><div class="th-note">From the heat-sinking tower to the first amplification stage.</div></th>
       <td><figure>
 <img src="SoudanTowerRemoval_20090408_163.jpg">
 <figcaption>
@@ -408,7 +416,7 @@ The heat-sinking tower provides electrically connected paths that are in strong 
 </tr>
 
 <tr class="sub-tab">	  
-<th>Cables connect to the output of the first amplification signal and make their way out through the E-Stem.</th>
+<th><div class="th-note">Cables connect to the output of the first amplification signal and make their way out through the E-Stem.</div></th>
   <td><figure>
 <img src="P3060006.jpg">
 <figcaption>
@@ -424,7 +432,7 @@ The heat-sinking tower provides electrically connected paths that are in strong 
 </tr>
 
 <tr class="sub-tab">
-  <th>From the inside of the E-box to a standard connector.</th>
+  <th><div class="th-note">From the inside of the E-box to a standard connector.</div></th>
       <td><figure>
 <img src="PB150022.jpg">
 <figcaption>
@@ -440,7 +448,7 @@ The heat-sinking tower provides electrically connected paths that are in strong 
       </tr>
 
 <tr class="sub-tab">
-  <th> And now the air-breathing humans have access to the detector signals. </th>
+<th><div class="th-note"> And now the air-breathing humans have access to the detector signals. </div></th>
       <td><figure>
 <img src="06_ebox.jpg">
 <figcaption>
