@@ -3,3 +3,6 @@ img, object {
   width: 400px;
   object-fit: contain;
 }
+th {
+    width: 300px;
+}
