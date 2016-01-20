@@ -1,0 +1,52 @@
+### Test Facilities + DAQ #########
+Building the core of the DAQ in close collaboration with the test facilities
+benefits both developers and test facilities.
+
+1. Deploying the DAQ at test facilities aggressively shakes out bugs.  Of
+particular importance are bugs with long-term impact for SNOLAB; for example
+the sequencer delay, and mhttpd stability.
+
+2. Test facilities are pursuing agressive detector goals and need a DAQ.
+
+
+### DAQ: short term #########
+To test detectors and DCRCs, I'd assert that test facilities to be able to set up
+their equipment; take science data for extended periods; and view the data, online
+and offline.
+
+While online data displays confirm that we're taking good data to disk, offline
+analysis can tell us about the performance of the system. I don't think we really
+know how well a DCRC works until we've got some physics plots of its data.
+
+(A) set up detectors - SQUID and TES tuning.  I'm assuming it's okay if the
+process is somewhat inconvenient.
+
+(B) online verification - pulse display.  The labview pulse display allows users
+to quickly check that the detectors are set up to take useful data.  If there are
+other online views into the data that are needed, I'm not aware of them.
+
+(C) science data-taking - automated flash and take sequence.  Data's just no good
+without occasional flashing.  Does this include SQUID relocking?  I'm not sure.
+
+(D) automated processing - automated processing of science data. By-hand
+processing at test facilities are inevitably delayed at test facilities, which
+house literal explosive devices. And the penalty on waiting to look at data is
+steep, since adjustments are frequently needed for usable data.
+
+(E) offline analysis - cdmsbats.  Is the data any good?  You need to view the
+pulses and plot RQs to find out.
+
+Of this list, only A, B, and C fall under DAQ jurisdiction. Items D and E likely
+belong to computing.
+
+
+### DAQ: long term #########
+This is a whole kettle of squid that I haven't thought extensively about.  My main
+(only?) point here is that if the test facilities are willing to work with us to
+develop the DAQ, we'll have a solid system when we install at SNOLAB.
+
+
+### Manpower: limited #########
+My favorite way to deal with limited manpower is to sideline or eliminate anything
+that's not critical.  But then determining the list of critical items becomes very
+important.
