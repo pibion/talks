@@ -1,0 +1,23 @@
+Hi all,
+
+I was thinking about DAQ and manpower issues, and spent some time looking around
+on the Internet over winter break.
+
+Robert Varner, a past collaborator of mine is currently working on a DAQ for the
+nuclear-physics RIB facility at MSU. Many of the issues we're facing are similar,
+and I think we'd benefit from collaborating with his group.
+
+I've put up a summary of the particular issues his group is considering at:
+https://docs.google.com/document/d/1tUVpu2Tk-WFe5JXFqDyuZ7ooq_KZvELk_jI0g9XmsRw/edit#
+
+Another possibility is the NSF SI2 grant
+(http://www.nsf.gov/pubs/2016/nsf16532/nsf16532.htm), a software infrastructure
+grant.  These grants are generally awarded to projects that are applicable to an
+entire field, and focuses on funding universities.  I think that partnering the
+specific work CMDS is doing with a more general DAQ-standards effort might be a
+good basis for an SSI proposal.  (Though I should note that this isn't necessarily
+straightforward to do with Robert Varner's group, as he's at ORNL.)
+
+I dunno.  What do you guys think?
+
+Amy
