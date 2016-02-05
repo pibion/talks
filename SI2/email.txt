@@ -1,22 +1,61 @@
 Hi all,
 
-I was thinking about DAQ and manpower issues, and spent some time looking around
-on the Internet over winter break.
+I spent some time over winter break thinking about DAQ and manpower issues, and
+found the NSF "Software Infrastructure for Sustained Innovation - SSE & SSI"
+grant. I think it might be possible for CDMS to apply to this grant, with the aim
+of getting funding for at least one full-time postdoc for three years.
 
-Robert Varner, a past collaborator of mine is currently working on a DAQ for the
-nuclear-physics RIB facility at MSU. Many of the issues we're facing are similar,
-and I think we'd benefit from collaborating with his group.
+### Money #########
+The award amounts are fairly lucrative. SSE grants provide a maximum of $500K over
+three years. SSI grants provide between $200K and $1M per year for three to five
+years. (http://www.nsf.gov/pubs/2016/nsf16532/nsf16532.htm)
+
+### However #########
+These software grants generally support work that benefits an entire field; it's
+rare that work restricted to a single collaboration recieves funding. To get a
+sense of what projects are typically funded, see
+https://sites.google.com/site/softwarecyberinfrastructure/software/software and
+http://www.nsf.gov/awardsearch/simpleSearchResult?queryText=SI2&ActiveAwards=true.
+
+I think we may be able to make a competitive proposal by collaborating with a
+group working on more general-purpose DAQ code.  MIDAS is perhaps an obvious
+collaboration to consider.  Another option to consider is the nuclear-physics DAQ
+team that's gearing up to support FRIB (https://www.phy.ornl.daq.gov/fribdaq).
+
+### Worth it? #########
+While there's money we can apply for, we'd need to hammer out a collaboration with
+a more-generally-applicable DAQ group. Work on specific software like MIDAS is
+most appropriate to the SSE grant, which is due April 26. More general work like
+developing standards for DAQ interoperability is more appropriate to the SSI
+grant, which is due September 19.
+
+I dunno.  What do you guys think?  Worth the trouble?
+
+Amy
+
+
+Robert Varner, a past collaborator of mine, is currently working on DAQ support
+for the nuclear-physics RIB facility at MSU. Many of the issues we're facing are
+similar, and I think we'd benefit from collaborating with his group.
 
 I've put up a summary of the particular issues his group is considering at:
 https://docs.google.com/document/d/1tUVpu2Tk-WFe5JXFqDyuZ7ooq_KZvELk_jI0g9XmsRw/edit#
 
-Another possibility is the NSF SI2 grant
+With collaboration, we'd be able to share expertise. For example, our group is
+increasingly familiar with Midas; this is a fairly common DAQ, but isn't well
+represented at MSU, where they most often use an in-house DAQ. Since Robert
+Varner's team needs to support the general DAQ needs of visiting users,
+collaborators that bring DAQ variety might be helpful. And with collaboration,
+we'd potentially be able to use some of the tools Dr. Varner's group will
+eventually build.
+
+Another possibility opened up by collaboration is the NSF SI2 grant
 (http://www.nsf.gov/pubs/2016/nsf16532/nsf16532.htm), a software infrastructure
-grant.  These grants are generally awarded to projects that are applicable to an
-entire field, and focuses on funding universities.  I think that partnering the
-specific work CMDS is doing with a more general DAQ-standards effort might be a
-good basis for an SSI proposal.  (Though I should note that this isn't necessarily
-straightforward to do with Robert Varner's group, as he's at ORNL.)
+grant. CDMS work, alone, is too specific to be a good fit for this grant, but
+partnering with a more general DAQ-standards effort might be a good basis for an
+SSI proposal.  I should add some forewarning, though: Robert Varner and his crew
+are (nearly) all from national labs, and so can't be PIs or co-PIs for this NSF
+grant.
 
 I dunno.  What do you guys think?
 
