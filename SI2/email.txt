@@ -1,35 +1,36 @@
 Hi all,
 
 I spent some time over winter break thinking about DAQ and manpower issues, and
-found the NSF "Software Infrastructure for Sustained Innovation - SSE & SSI"
-grant. I think it might be possible for CDMS to apply to this grant, with the aim
-of getting funding for at least one full-time postdoc for three years.
+found the NSF "Software Infrastructure for Sustained Innovation - SSE & SSI" grant
+(http://www.nsf.gov/pubs/2016/nsf16532/nsf16532.htm). I think it might be possible
+for CDMS to apply to this grant, with the aim of getting funding for at least one
+full-time postdoc for three years.
 
-### Money #########
-The award amounts are fairly lucrative. SSE grants provide a maximum of $500K over
-three years. SSI grants provide between $200K and $1M per year for three to five
-years. (http://www.nsf.gov/pubs/2016/nsf16532/nsf16532.htm)
+### Money ######### The success rate for proposals is about 20%, but the award
+amounts are fairly lucrative. SSE grants run for three years, and typically
+provide $500K in total. SSI grants run for five years, and typically provide $1M
+in total. See the attached plots for award-amount distributions.
 
-### However #########
-These software grants generally support work that benefits an entire field; it's
-rare that work restricted to a single collaboration recieves funding. To get a
-sense of what projects are typically funded, see
+### However ######### These software grants generally support work that benefits
+an entire field; it's rare that work restricted to a single collaboration recieves
+funding. To get a sense of what projects are typically funded, see
 https://sites.google.com/site/softwarecyberinfrastructure/software/software and
 http://www.nsf.gov/awardsearch/simpleSearchResult?queryText=SI2&ActiveAwards=true.
 
 I think we may be able to make a competitive proposal by collaborating with a
-group working on more general-purpose DAQ code.  MIDAS is perhaps an obvious
-collaboration to consider.  Another option to consider is the nuclear-physics DAQ
+group working on more general-purpose DAQ code. MIDAS is perhaps an obvious
+collaboration to consider. Another option to consider is the nuclear-physics DAQ
 team that's gearing up to support FRIB (https://www.phy.ornl.daq.gov/fribdaq).
 
-### Worth it? #########
-While there's money we can apply for, we'd need to hammer out a collaboration with
-a more-generally-applicable DAQ group. Work on specific software like MIDAS is
-most appropriate to the SSE grant, which is due April 26. More general work like
-developing standards for DAQ interoperability is more appropriate to the SSI
-grant, which is due September 19.
+### Worth it? ######### While there's money we can apply for, we'd need to (A)
+hammer out a collaboration with a more-generally-applicable DAQ group or (B)
+propose to expand the scope of our current work.
 
-I dunno.  What do you guys think?  Worth the trouble?
+Work on specific software like MIDAS is most appropriate to the SSE grant, which
+is due April 26. More general work like developing standards for DAQ
+interoperability is more appropriate to the SSI grant, which is due September 19.
+
+I dunno. What do you guys think? Worth the trouble?
 
 Amy
 
