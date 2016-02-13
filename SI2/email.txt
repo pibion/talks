@@ -19,16 +19,18 @@ http://www.nsf.gov/awardsearch/simpleSearchResult?queryText=SI2&ActiveAwards=tru
 
 I think we may be able to make a competitive proposal by collaborating with a
 group working on more general-purpose DAQ code. MIDAS is perhaps an obvious
-collaboration to consider. Another option to consider is the nuclear-physics DAQ
-team that's gearing up to support FRIB (https://www.phy.ornl.daq.gov/fribdaq).
+collaboration to consider. Another option to consider is the work being done by
+some former collaborators of mine at FRIB
+(https://www.phy.ornl.daq.gov/fribdaq).
 
 ### Worth it? ######### While there's money we can apply for, we'd need to (A)
 hammer out a collaboration with a more-generally-applicable DAQ group or (B)
 propose to expand the scope of our current work.
 
-Work on specific software like MIDAS is most appropriate to the SSE grant, which
-is due April 26. More general work like developing standards for DAQ
-interoperability is more appropriate to the SSI grant, which is due September 19.
+Work on specific software like MIDAS is most appropriate to the SSE grant,
+which is due April 26. The SSI grant is due September 19 and is intended to
+support more general work.  An example of a project that might be a good fit
+for the SSI grant is the FRIB-based work on building interoperable DAQ tools. 
 
 I dunno. What do you guys think? Worth the trouble?
 
