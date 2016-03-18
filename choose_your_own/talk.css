@@ -1,0 +1,15 @@
+#breadcrumbs {
+  background-color: aliceblue;
+}
+
+section#currentContent {
+  display: flex;
+}
+
+div.content {
+  max-width: 740px;
+}
+div.options {
+  align-self: flex-end;
+  padding-left: 4em;
+}
