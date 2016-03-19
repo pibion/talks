@@ -1,5 +1,4 @@
 #breadcrumbs {
-  background-color: aliceblue;
 }
 
 section#currentContent {
@@ -12,4 +11,19 @@ div.content {
 div.options {
   align-self: flex-end;
   padding-left: 4em;
+}
+.options .path {
+  padding: 1em;
+  background-color: aliceblue;
+  border-radius: 3px;
+}
+.options .path ~ .path {
+  margin-top: 1ex;
+}
+[onclick] {
+  cursor: pointer;
+}
+
+emph {
+  font-style: oblique;
 }
