@@ -17,6 +17,11 @@ div.options {
   background-color: aliceblue;
   border-radius: 3px;
 }
+.options .path.amy {
+  background-color: thistle;
+  /* antiquewhite? */
+  /* plum? */
+}
 .options .path ~ .path {
   margin-top: 1ex;
 }
