@@ -15,10 +15,16 @@
 
 section#currentContent {
   display: flex;
+  /*height: 100%;*/
+  height: 700px;
 }
 
 div.content {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
   width: 100ex;
+  height: 100%;
 }
 div.options {
   align-self: flex-end;
@@ -48,17 +54,36 @@ emph {
 .flex-container {
   display: flex;
 }
+.flexy {
+  flex-shrink: 1;
+}
 #detector-tab figure {
   flex-shrink: 2;
 }
 img, object {
-  width: 100%;
-  object-fit: contain;
+  max-height: 100%;
+  max-width: 100%;
 }
 
+.tabs {
+  padding-top: 1ex;
+}
 .tabs section {
   display: none;
 }
 .tabs section.selected {
   display: block;
+}
+.tabs a ~ a {
+  margin-left: 1em;
+}
+.tabs a {
+  padding-top: 0.3ex;
+  padding-bottom: 0.3ex;
+}
+.tabs a.selected {
+  border-top-style: solid;
+  border-width: medium;
+  border-color: lightblue;
+  border-bottom-style: solid;
 }

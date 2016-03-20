@@ -8,11 +8,11 @@ talk.master_path_map = {
     "id": "AProblem",
     "title": "It's 1939.  We're looking at distant galaxies, and there's a problem.",
     "short_title": "galaxies don't make sense",
-    "path_list": ["WIMPs", "neutrinos", "MOND", "MACHOs", "DetectorTime"],
+    "path_list": ["WIMPs", "neutrinos", "MOND", "DetectorTime"],
     "path_amy": "DetectorTime",
     "content": "<p><emph>It seemed so straightforward.</emph>  Surely we could assume that in galaxies, the mass is directly proportional to the light?</p>"
                + "<p>But this assumption, plus gravity, led to ... complete disagreement with the data Zwicky collected.</p>"
-               + "<figure><img src='images/RotationCurve_2403.png'></figure>",
+               + "<figure class='flexy'><img src='images/RotationCurve_2403.png'></figure>",
   },
 
   "neutrinos": {
@@ -97,7 +97,7 @@ talk.master_path_map = {
     "path_list": ["LUX","DAMIC","CDMS","COUPP"],
     "path_amy": "CDMS",
     "content": "<p>Building a detector that can tell you how much energy a particle just deposited is tricky.  How do you build a detector that can also tell you what kind of particle interacted?</p>"
-      + " <figure><img src='images/NucRecoilAtoms.jpg'><figcaption></figcaption></figure>"
+      + " <figure style='height:400px'><img src='images/NucRecoilAtoms.jpg'><figcaption></figcaption></figure>"
   },
 
   "LUX": {
@@ -118,15 +118,15 @@ talk.master_path_map = {
     "short_title": "phonon detectors",
     "path_list": ["Fridge","ReadoutElectronics","DetectorFab","DAQ","Shielding","Soudan","Results"],
     "path_amy": "DetectorFab",
-    "content": "<p>CDMS has built detectors that are sensitive to phonons and to ionization.  This gives us the ability to almost completely reject background signals, even at very low energies.  But it comes at a price: the detectors are difficult to make, difficult to use, and expensive.</p>"
-      + "<p>But we detect <emph>phonons</emph>.  It's <emph>amazing</emph>.</p>"
+    "content": "<p>CDMS detectors sense both phonons and ionization.  This gives us the ability to almost completely reject background signals, even at very low energies."
+      + "<BR><BR>Detecting phonons is not easy, but it's worth it.  Phonons are <emph>amazing</emph></p>"
       + "<div class='tabs'>"
       + "<a name='detector-tab' onclick='talk.selectTab(this);'>CDMS detectors</a>"
-      + "<a name='phonon-tab' onclick='talk.selectTab(this);'>Phonons</a>"
+      + "<a name='phonon-tab' class='selected' onclick='talk.selectTab(this);'>Phonons</a>"
       + "<a name='ionization-tab' onclick='talk.selectTab(this);'>Ionization</a>"
       + "<a name='superconductivity-tab' onclick='talk.selectTab(this);'>Superconducting Transition</a>"
 
-      + "<section id='detector-tab' class='selected'>"
+      + "<section id='detector-tab'>"
       + "<div class='flex-container'>"
       + "<figure><img src='../cdms_intro/TES_circuit.svg'><figcaption>The variable resistor (highlighted) represents the tungsten wires on the surface of the detector</figcaption></figure>"
       + "<ol><li>A neutron interacts with the detector, jostling the crystal lattice.</li>"
@@ -137,16 +137,22 @@ talk.master_path_map = {
       + "</div>"
       + "</section>"
 
-      + "<section id='phonon-tab'>"
+      + "<section id='phonon-tab' class='selected'>"
       + "<p>Phonons are the movement of atoms in a crystal.</p>"
+      + "<p>When a particle deposits energy in the detector, one of the ways it can deposit that energy is by creating phonons.</p>"
+      + " <figure style='height:400px'><img src='images/NucRecoilAtoms.jpg'><figcaption>The regularly-spaced nuclei in this depiction of a crystal (not to scale!) are attached as though by loose springs.  The whole thing can bounce and move together.  See <a href='http://www.pbs.org/wgbh/nova/physics/dark-matter.html'>www.pbs.org/wgbh/nova/physics/dark-matter.html</a>.</figcaption></figure>"
       + "</section>"
 
       + "<section id='ionization-tab'>"
       + "<p>Ionization refers to electrons, kicked free from their atoms.</p>"
+      + "<p>Kicking electrons free is another way a particle can deposit energy in the detector.</p>"
+      + "<p>Ionization is an important part of the CDMS detectors - we use it to select WIMP-like eventsfrom a sea of background events.  This talk does not discuss ionization in detail, though, mostly becuase the ionization sensors aren't as tricky as the phonon sensors.</p>"
       + "</section>"
 
       + "<section id='superconductivity-tab'>"
-      + "<p>Superconducting transitions turn boring materials into exquisite sensors.</p>"
+      + "<p>Materials going through a superconducting transition are - briefly - exquisite sensors.</p>"
+      + "<p>A feedback circuit holds the CDMS sensors right in the middle of their transition.</p>"
+      + " <figure style='height:400px'><img src='images/713d0783-80ac-4956-ae0a-3a6cddd6d10d.jpg'><figcaption>The resistivity of doped FeSe as a function of temperature.  The sudden drop is its 'supercondcting transition.'  This compound is always sensitive to temperature - but is extremely sensitive to temperature during its transition.  From <a href='http://dx.doi.org/10.4236/msa.2012.39090'>dx.doi.org/10.4236/msa.2012.39090</a>.</figcaption></figure>"
       + "</section>"
       + "</div>"
   },
@@ -158,8 +164,8 @@ talk.master_path_map = {
     "path_list": ["NightmareFridge","CDMS"],
     "content": "<p><emph>You knew the detectors needed to be cold, but 50 mK?  Really?</emph>"
       + "<p>The CDMS detectors use tiny tungsten wires - balanced right in the middle of their transition to superconducting - to listen for phonons.  For reasons I have not at all explained, the sharpness of that superconducting transition is related to the temperature at which the transition starts.  As the transition temperature gets colder, the transition also gets steeper.</p>"
-      + "<p>So, colder detectors means a steeper transition.  But, uh, 70 mK is pretty easy while 5 mK is nearly impossible.</p>"
-      + "<p>How, uh, do we really need to.  Do we really care about a sharp superconducting transition?</p>"
+      + "<p>But cold is not easy.  While 70 mK is pretty easy, 5 mK is nearly impossible.</p>"
+      + "<p>So how much do we really care about a sharp superconducting transition?</p>"
       + "<p>Unfortunately for you, fridge maker, we care a lot.  The sharpness of the superconducting transition directly affects the signal-to-noise ratio of our detector.  And the signal-to-noise ratio directly affects our ability to see very, very small energy depositions.</p>"
       + "<p>So you have to go cold.  But really, 50 mK is no big deal.  A 'Dilution Refridgerator' is a common (ish) piece of equipment that can easily (ish) cool our detectors to 50 mK.  Fork over $100,000 to Janis, and we'll be set.</p>"
       + "<p>Except.  Where will the shielding go?</p>"
@@ -188,12 +194,12 @@ talk.master_path_map = {
     "title": "Recording what your detectors hear.",
     "short_title": "gotta write it down",
     "path_list": ["CDMS"],
-    "content": "<p>The best detectors in the world can't help you find WIMPs if you don't record what they hear. So.  How do we record the detector signals?</p>"
-      + "<p>For most experiments (including CDMS), recording absolutely everything the detectors hear is impractical: it's too much data.  Hard drives are cheap, but they're not free.</p>"
-      + "<p>So for CDMS, the first step to recording what the detectors hear is to decide <emph>when</emph> to record.  The shielding people have done an excellent job, and mostly what the detectors hear is: extremeley boring silence.  To catch the rare moments when the detectors hear something, you need to build a 'discriminator circuit,' or buy one on ebay.</p>"
-      + "<p>Now that you have an electronic signal that lets you know when something interesting is going on, get some digitizers.  You'll probably have to work with C.A.E.N. because all the other nuclear instrumentation companies have gone out of business.</p>"
-      + "<p>Great!  Now just teach a computer to talk to the digitizers, and you're done!  You can watch the signals flicker across your low-resolution screen that seems disconcertingly hot to the touch.</p>" 
-      + "<p>You are happy.  With your detectors, you can see a hidden universe.  Which apparently includes an awful lot of 60 Hz noise.  Did you leave the lights on in the RF room?</p>" 
+    "content": "<p>The best detectors in the world can't help you find WIMPs if you don't record what they hear.</p>"
+      + "<p>For CDMS, recording absolutely everything the detectors hear is just too much data.</p>"
+      + "<p>The first step to recording what the detectors hear is to <strong>decide <emph>when</emph> to record</strong>.  The shielding people have done an excellent job, and mostly what the detectors hear is: extremeley boring silence.  To catch the rare moments when the detectors hear something, you need to build a 'discriminator circuit,' or buy one on ebay.</p>"
+      + "<p>Now that you know when something interesting is going on, <strong>get some digitizers</strong>.  These will convert your analog detector signal into something your computer can understand - a digital signal.</p>"
+      + "<p>Great!  Now just <strong>teach a computer to talk to your digitizers</strong>, and you're done!  You can watch the signals flicker across your low-resolution screen that seems disconcertingly hot to the touch.</p>" 
+      + "<figure><img src='images/PA090054.JPG'><figcaption>You are happy.  With your detectors, you can see a hidden universe.</figcaption></figure>"
   },
   "Shielding": {
     "id": "Shielding",
@@ -208,18 +214,30 @@ talk.master_path_map = {
     "short_title": "deep underground",
     "path_list": ["CDMS"],
     "content": "<p>The CDMS experiment operated on the 27th level of the Soudan iron mine: half a mile underground.  The half-mile of overhead rock (almost) completely shields out cosmic radiation.</p>"
-      + "<p>Going underground - deep underground - is an absolute necessity for all the sit-around-and-wait Dark Matter experiments.</p>"
-      + "<p>Just be sure that anything you need to control is remotely controllable.  There's a ride to the 27th level at 7 AM and a ride back up at 5 PM.  And no, you can't stay overnight.  What if a fire started?</p>"
-      + "<p>Also keep in mind that all the pieces have to fit in the cage.</p>"
-      + "<p>And you'll need to have a word with the dudes in charge of the fridge.  The mine has limited ventilation, and the amount of liquid He they're storing could quickly become lethal if it evaporated too quickly.</p>"
-      + "<p>Also, don't touch the bats!  Rabies is rare, but still.  Safety fist.</p>"
+      + "<div class='bss-slides'>"
+      + "<figure><img style='height:500px;' src='images/cosmic_rays.jpg'><figcaption>Going underground - deep underground - is an absolute necessity for all the sit-around-and-wait Dark Matter experiments.</figcaption></figure>"
+      + "<figure><img src='../cdms_intro/P1270009.jpg'><figcaption>Keep in mind that all the pieces have to fit in the cage.</figcaption></figure>"
+      + "<figure><img src='images/PB040001.jpg'><figcaption>Be sure that anything you need to control is remotely controllable.  There's a ride to the 27th level at 7 AM and a ride back up at 5 PM.  And no, you can't stay overnight.  What if a fire started?</figcaption></figure>"
+      + "<figure><img src='../cdms_intro/Slide04_DavisCavern.jpg'><figcaption>Make yourself at home. This image shows a cavern at the Homestake mine in western South Dakota. But the atmosphere is spot-on for Soudan. Image from www.symmetrymagazine.com.</figcaption></figure>"
+      + "</div>"
+      //+ "<p>Also, don't touch the bats!  Rabies is rare, but still.  Safety fist.</p>"
+      //+ "<p>And you'll need to have a word with the dudes in charge of the fridge.  The mine has limited ventilation, and the amount of liquid He they're storing could quickly become lethal if it evaporated too quickly.</p>"
   },
   "DetectorFab": {
     "id": "DetectorFab",
     "title": "Making the CDMS detectors",
     "short_title": "a recipe for phonon detectors",
     "path_list": ["CDMS"],
-    "content": ""
+    "content": "<p><emph>The detector is basically just a variable resistor, they say, waving a hand to show its simplicity.</emph></p>"
+      + "<p><emph>You disagree.</emph></p>"
+      + "<div class='bss-slides'>"
+      + "<figure><img style='height:500px;' src='../cdms_intro/weld.png'><figcaption>The final step.  Once the sensors are deposited onto the germanium crystal, you'll jump to the outside world with a gossamer-thin wire.</figcaption></figure>"
+      + "<figure><img src='../cdms_intro/TES_schematic.jpg'><figcaption>A schematic of the transition-edge sensor. The thin tungsten strip (pink) is held in the middle of its superconducting transition.  Because the tungsten strip is very small, it doesn't collect many phonons.  So the tungsten is attached to large aluminum fins (blue); some of this energy trickles into the tungsten wire, warming it. From 10.1016/j.nima.2014.10.043.</figcaption></figure>"
+      + "<figure><img src='../cdms_intro/TES_schematic.jpg'><img src='../cdms_intro/TES_oops.jpg'><figcaption>A closeup view of two different transition-edge sensors. The photolithographic fabrication hiccuped for each; a drop of acid will remove them from the sensor chain. Notice the circular wire-bonding pad on the lower left of the image. These are placed along the phonon sensor path periodically so that individual phonon sensors can be removed without breaking the entire channel. Image from 10.1016/j.nima.2014.10.043; explanations from Joel Sander.</figcaption></figure>"
+      + "<figure><img src='../cdms_intro/TES_schematic.jpg'><img src='../cdms_intro/FIG10.jpg'><figcaption>The whole point of the aluminum fins is to collect phonons and then deliver them to your superconducting tungsten wire.  This works poorly when the aluminum fin doesn't actually touch the tungsten wire.  Image from 10.1016/j.nima.2014.10.043.</figcaption></figure>"
+
+      + "</div>"
+
   },
   "Results": {}
 };
@@ -329,6 +347,7 @@ talk.navigate_to = function(pathID) {
   talk.display_path(pathID);
   talk.display_breadcrumbs();
   MathJax.Hub.Queue(["Typeset",MathJax.Hub]);
+  makeBSS('.bss-slides');
 };
 
 window.onhashchange = function (evt) {
