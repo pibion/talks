@@ -45,13 +45,20 @@ emph {
   font-style: oblique;
 }
 
-#detector {
+.flex-container {
   display: flex;
 }
-#detector figure {
+#detector-tab figure {
   flex-shrink: 2;
 }
 img, object {
   width: 100%;
   object-fit: contain;
+}
+
+.tabs section {
+  display: none;
+}
+.tabs section.selected {
+  display: block;
 }

@@ -121,8 +121,13 @@ talk.master_path_map = {
     "content": "<p>CDMS has built detectors that are sensitive to phonons and to ionization.  This gives us the ability to almost completely reject background signals, even at very low energies.  But it comes at a price: the detectors are difficult to make, difficult to use, and expensive.</p>"
       + "<p>But we detect <emph>phonons</emph>.  It's <emph>amazing</emph>.</p>"
       + "<div class='tabs'>"
-      + "<section id='tab1'><h2><a href='#tab1'>CDMS detectors</a></h2>"
-      + "<div id='detector'>"
+      + "<a name='detector-tab' onclick='talk.selectTab(this);'>CDMS detectors</a>"
+      + "<a name='phonon-tab' onclick='talk.selectTab(this);'>Phonons</a>"
+      + "<a name='ionization-tab' onclick='talk.selectTab(this);'>Ionization</a>"
+      + "<a name='superconductivity-tab' onclick='talk.selectTab(this);'>Superconducting Transition</a>"
+
+      + "<section id='detector-tab' class='selected'>"
+      + "<div class='flex-container'>"
       + "<figure><img src='../cdms_intro/TES_circuit.svg'><figcaption>The variable resistor (highlighted) represents the tungsten wires on the surface of the detector</figcaption></figure>"
       + "<ol><li>A neutron interacts with the detector, jostling the crystal lattice.</li>"
       + "<li>The movement of the crystal lattice heats the small tungsten wires on the surface.</li>"
@@ -131,11 +136,19 @@ talk.master_path_map = {
       + "<li>Magnetic-field sensors report the changing current to the physicists.</li></ol>"
       + "</div>"
       + "</section>"
-      + "<section id='tab2'><h2><a href='#tab2'>Phonons</a></h2>"
+
+      + "<section id='phonon-tab'>"
       + "<p>Phonons are the movement of atoms in a crystal.</p>"
       + "</section>"
+
+      + "<section id='ionization-tab'>"
+      + "<p>Ionization refers to electrons, kicked free from their atoms.</p>"
+      + "</section>"
+
+      + "<section id='superconductivity-tab'>"
+      + "<p>Superconducting transitions turn boring materials into exquisite sensors.</p>"
+      + "</section>"
       + "</div>"
-      + "<div><p>Ionization refers to electrons, kicked free from their atoms.</p></div>"
   },
 
   "Fridge":{
@@ -282,6 +295,22 @@ talk.display_breadcrumbs = function() {
     range.deleteContents();
 
     navNode.insertAdjacentHTML('afterbegin', nav_html);
+};
+
+talk.selectTab = function(tab_el) {
+  var parent_el = tab_el.parentElement;
+  var id_str = tab_el.getAttribute('name');
+  var section_el = document.getElementById(id_str);
+
+  // turn everything off
+  var el_arr = parent_el.childNodes;
+  for (var i = 0; i < el_arr.length; i++) {
+    el_arr[i].classList.remove('selected');
+  }
+
+  // turn the targeted tab on
+  tab_el.classList.add('selected');
+  section_el.classList.add('selected');
 };
 
 talk.navigate_to = function(pathID) {
