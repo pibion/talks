@@ -6,7 +6,7 @@ var talk = talk || {};
 talk.master_path_map = {
   "AProblem": {
     "id": "AProblem",
-    "title": "It's 1939.  We finally have pictures of distant galaxies, and there's a problem.",
+    "title": "It's 1939.  We're looking at distant galaxies, and there's a problem.",
     "short_title": "galaxies don't make sense",
     "path_list": ["WIMPs", "neutrinos", "MOND", "MACHOs", "DetectorTime"],
     "path_amy": "DetectorTime",
@@ -24,6 +24,7 @@ talk.master_path_map = {
       + "<aside>To qualify as a Dark Matter candidate, you must (1) have mass and (2) not shine.</aside>"
       + "<p>But if you try to simulate our universe using neutrinos as Dark Matter, you'll have trouble: as your simulation runs, you should see matter clump into galaxies and groups of galaxies.  With neutrinos as your Dark Matter, matter stays far too evenly distributed.</p>"
       + "<p>The problem is that neutrinos move too fast - they zing around at nearly the speed of light.  We call neutrinos, 'hot dark matter'.  And to reproduce our galactic structure, we need 'cold dark matter.'</p>"
+      + "<embed src='millennium_flythru_fast.avi'></embed>"
   },
   
   "MOND": {
@@ -62,7 +63,7 @@ talk.master_path_map = {
     "path_list": ["SignalRate","BackgroundRate","EnergyDeposited","DetectorTime"],
     "path_amy": "DetectorTime",
     "content": "<p><emph>Impossible searches for imaginary particles are fine if you've already got tenure.</emph>  But what if you don't?  Or are just averse to wasting your time?<p>"
-      + "<p>Let's review: we want to search for a particle that - by definition - rarely interacts. How long will we need to wait before we see a signal?  10 years?  100 years?  More?</p>" 
+      + "<p>We want to search for a particle that - by definition - rarely interacts. How long will we need to wait before we see a signal?  10 years?  100 years?  More?</p>" 
       + "<p>Suppose a WIMP does interact with our detector. How much energy will it deposit?  Is existing detector technology sensitive enough to see it?</p>"
       + "<p>And while WIMPs will rarely, if ever, interact in our detector, plenty of other particles are happy to leave signals.  How do we tell what signals are WIMPs, and what signals are ordinary gammas/neutrons/electrons/etc.?</p>"
   },
@@ -71,8 +72,8 @@ talk.master_path_map = {
     "id": "DetectorTime",
     "title": "Let's build a WIMP detector!",
     "short_title": "detector time!",
-    "path_list": ["DiscriminateNR","DAMA","CDMS"],
-    "path_amy": "CDMS",
+    "path_list": ["DiscriminateNR","DAMA"],
+    "path_amy": "DiscriminateNR",
     "content": "<p>Let's build a detector.</p>"
   },
 
@@ -96,6 +97,7 @@ talk.master_path_map = {
     "path_list": ["LUX","DAMIC","CDMS","COUPP"],
     "path_amy": "CDMS",
     "content": "<p>Building a detector that can tell you how much energy a particle just deposited is tricky.  How do you build a detector that can also tell you what kind of particle interacted?</p>"
+      + " <figure><img src='images/NucRecoilAtoms.jpg'><figcaption></figcaption></figure>"
   },
 
   "LUX": {
@@ -118,17 +120,29 @@ talk.master_path_map = {
     "path_amy": "DetectorFab",
     "content": "<p>CDMS has built detectors that are sensitive to phonons and to ionization.  This gives us the ability to almost completely reject background signals, even at very low energies.  But it comes at a price: the detectors are difficult to make, difficult to use, and expensive.</p>"
       + "<p>But we detect <emph>phonons</emph>.  It's <emph>amazing</emph>.</p>"
-      + "<div><p>Wait!  What are phonons?</p></div>"
-      + "<div><p>Wait!  What is ionization?</p></div>"
-      + "<div><p>Wait!  How do phonons and ionization help me see WIMPs?</p></div>"
-      + "<div><p>Okay.  So how do CDMS detectors work?</p></div>"
+      + "<div class='tabs'>"
+      + "<section id='tab1'><h2><a href='#tab1'>CDMS detectors</a></h2>"
+      + "<div id='detector'>"
+      + "<figure><img src='../cdms_intro/TES_circuit.svg'><figcaption>The variable resistor (highlighted) represents the tungsten wires on the surface of the detector</figcaption></figure>"
+      + "<ol><li>A neutron interacts with the detector, jostling the crystal lattice.</li>"
+      + "<li>The movement of the crystal lattice heats the small tungsten wires on the surface.</li>"
+      + "<li>As the tungsten wires warm up, their resistance increases.</li>"
+      + "<li>The tunsten wires are held at constant voltage: as their resistance increases, the current through them drops.</li>"
+      + "<li>Magnetic-field sensors report the changing current to the physicists.</li></ol>"
+      + "</div>"
+      + "</section>"
+      + "<section id='tab2'><h2><a href='#tab2'>Phonons</a></h2>"
+      + "<p>Phonons are the movement of atoms in a crystal.</p>"
+      + "</section>"
+      + "</div>"
+      + "<div><p>Ionization refers to electrons, kicked free from their atoms.</p></div>"
   },
 
   "Fridge":{
     "id": "Fridge",
     "title": "Go cold or go home.",
     "short_title": "50 mK detectors",
-    "path_list": ["NightmareFridge","ShieldedFridge","CDMS"],
+    "path_list": ["NightmareFridge","CDMS"],
     "content": "<p><emph>You knew the detectors needed to be cold, but 50 mK?  Really?</emph>"
       + "<p>The CDMS detectors use tiny tungsten wires - balanced right in the middle of their transition to superconducting - to listen for phonons.  For reasons I have not at all explained, the sharpness of that superconducting transition is related to the temperature at which the transition starts.  As the transition temperature gets colder, the transition also gets steeper.</p>"
       + "<p>So, colder detectors means a steeper transition.  But, uh, 70 mK is pretty easy while 5 mK is nearly impossible.</p>"
@@ -143,8 +157,8 @@ talk.master_path_map = {
     "title": "An unconvential fridge design",
     "short_title": "coldfinger fridge",
     "path_list": ["CDMS"],
-    "content": "<p><emph>It took two years, and you never doubted it would work.<emph>  Still, it's nice to see the fridge running at 50 mK.</p>"
-      + "<figure><img><figcaption></figcaption></figure>"
+    "content": "<p><emph>It took two years, and you never doubted it would work.<emph></p>"
+      + "<figure><img src='../cdms_intro/fridge_icebox_align.svg'><figcaption>The fridge at Soudan gets the 'fridge stuff' out of the way so the detectors (black rectangles, center) can be surrounded with plastic and lead shielding.  This image is color-coded: red indicates the searing heat of room temperature, while black indicates the incredibly-cold 50 mK.</figcaption></figure>"
   },
   "ReadoutElectronics": {
     "id": "ReadoutElectronics",
@@ -173,7 +187,7 @@ talk.master_path_map = {
     "title": "Super sensitive detectors are a double-edged sword.",
     "short_title": "shield out the boring radiation",
     "path_list": ["CDMS"],
-    "content": "<p>When building a WIMP detector, there's a short list of particles you need to worry about."
+    "content": "<p>When building a WIMP detector, there's a short list of particles you need to worry about: gammas and neutrons.  Lead shields out gammas quite well, and plastic shields out neutrons (low energy neutrons, at least) well.</p>"
   },
   "Soudan": {
     "id": "Soudan",
