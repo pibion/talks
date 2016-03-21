@@ -1,0 +1,8 @@
+Quiet, please: 
+Listening for rare particles with the Cryogenic Dark Matter Search detectors.
+
+For more than ten years, the Cryogenic Dark Matter Search (CDMS) has been running a set of exquisitely sensitive detectors in an iron mine, half a mile below the surface of the earth.
+
+We designed our detectors to be sensitive to a hypothesized - but not yet observed - dark matter particle, the Weakly Interacting Massive Particle.  
+
+This talk will explore how the CDMS detectors see the world, and how their design helps them distinguish between common radiation and the rare, weak interactions we expect from dark matter.  Along the way, we'll encounter some marvelous engineering solutions that feature controlled superconducting transitions, kevlar mechanical supports, and 5-ton cranes. 
