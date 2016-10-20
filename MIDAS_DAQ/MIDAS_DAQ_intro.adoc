@@ -1,0 +1,48 @@
+Data Acquisition and You
+========================
+:icons: font
+:toc2:
+
+Record data and explore your world.
+
+
+Start by thinking about physics!
+--------------------------------
+image::DAQ_scenario.PNG[width=500]
+
+WARNING: What units should our intrepid physicists use??
+
+
+What do we need to answer the physics question?
+-----------------------------------------------
+
+=== Know the shape and mass of your detector
+Not the focus of this talk.
+
+=== Know the livetime of your experiment
+Incredibly simple for some experiments; moderately complex for CDMS.
+
+=== Record what your detectors see
+How you do this depends on the physics question you're asking and your detectors.  There are three basic styles of recording:
+
+* recording discrete events
+* continuous recording
+* selective recording
+
+image::selective_recording.png[width=500]
+
+
+Writing your first DAQ
+----------------------
+There are many (many, many) ways to write a DAQ.  Here, I illustrate one possible method.
+
+- [line-through]#you'll want a start button# ignore - distration!
+- [line-through]#and of course a stop button# ignore - distraction!
+- and how will you tell it to record data from a detector?
+
+image::ODB.png[width=500]
+
+This method is roughly similar to that of the MIDAS DAQ, which is developed by a group of physicists from PSI (a lab in Germany) and Triumf (a lab in Canada).
+
+* edit the database to control the DAQ
+* write functions that interact with your hardware
