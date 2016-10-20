@@ -10,7 +10,7 @@ image::../phonon_detectors/images/PA090054.JPG[width=900]
 
 Start by thinking about physics!
 --------------------------------
-image::DAQ_scenario.PNG[width=500]
+image::DAQ_scenario.png[width=500]
 
 WARNING: What units should our intrepid physicists use??
 
