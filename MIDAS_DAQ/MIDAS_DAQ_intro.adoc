@@ -1,9 +1,11 @@
-Data Acquisition and You
-========================
+CDMS Data Acquisition and You
+=============================
 :icons: font
 :toc2:
+:toclevels: 1
 
-Record data and explore your world.
+.Record data and explore your world.
+image::../phonon_detectors/images/PA090054.JPG[width=900]
 
 
 Start by thinking about physics!
@@ -19,24 +21,26 @@ What do we need to answer the physics question?
 === Know the shape and mass of your detector
 Not the focus of this talk.
 
-=== Know the livetime of your experiment
-Incredibly simple for some experiments; moderately complex for CDMS.
+=== Know the livetime of your experiment <- DAQ!
+Incredibly simple for some experiments; moderately complex for CDMS.  Not discussed in this talk.
 
-=== Record what your detectors see
-How you do this depends on the physics question you're asking and your detectors.  There are three basic styles of recording:
+=== Record what your detectors see <- DAQ!
+The main focus of this talk.
+
+How you do this depends on the physics question you're asking and your detectors.  There are three basic ways to record data:
 
 * recording discrete events
 * continuous recording
-* selective recording
+* selective recording <- CDMS uses this!
 
-image::selective_recording.png[width=500]
+image::selective_recording.png[width=900]
 
 
 Writing your first DAQ
 ----------------------
 There are many (many, many) ways to write a DAQ.  Here, I illustrate one possible method.
 
-- [line-through]#you'll want a start button# ignore - distration!
+- [line-through]#you'll want a start button# ignore - distraction!
 - [line-through]#and of course a stop button# ignore - distraction!
 - and how will you tell it to record data from a detector?
 
@@ -46,3 +50,27 @@ This method is roughly similar to that of the MIDAS DAQ, which is developed by a
 
 * edit the database to control the DAQ
 * write functions that interact with your hardware
+
+
+MIDAS DAQ: terms MIDAS uses
+---------------------------
+Some terms used in this talk are common to everyone in the DAQ community (livetime, readout electronics).
+
+CDMS uses custom language for the readout electronics: cold hardware, and warm hardware.
+
+MIDAS uses specialized language to describe the different components of its DAQ.
+
+image::MIDAS_DAQ.png[width=900]
+
+
+The End
+-------
+This talk focuses on the "record the data" job of data acquisition.  It ignores the "know the livetime" piece entirely!
+
+You should now understand that
+* MIDAS is a set of data acquisition programs.  It operates by using a database that triggers functions when we change its values.
+* MIDAS calls this database the "Online Database", or "ODB".
+* The MIDAS program mhttpd gives us access to the ODB.
+* The MIDAS program mlogger is responsible for writing data to disk.
+* We have to write a program that talks to our readout hardware.  MIDAS calls such a program a "frontend".
+

@@ -5,7 +5,7 @@
 <!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge"><![endif]-->
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="generator" content="Asciidoctor 1.5.4">
-<title>Data Acquisition and You</title>
+<title>CDMS Data Acquisition and You</title>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,300italic,400,400italic,600,600italic%7CNoto+Serif:400,400italic,700,700italic%7CDroid+Sans+Mono:400,700">
 <style>
 /* Asciidoctor default stylesheet | MIT License | http://asciidoctor.org */
@@ -420,27 +420,26 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </head>
 <body class="article toc2 toc-left">
 <div id="header">
-<h1>Data Acquisition and You</h1>
+<h1>CDMS Data Acquisition and You</h1>
 <div id="toc" class="toc2">
 <div id="toctitle">Table of Contents</div>
 <ul class="sectlevel1">
 <li><a href="#_start_by_thinking_about_physics">Start by thinking about physics!</a></li>
-<li><a href="#_what_do_we_need_to_answer_the_physics_question">What do we need to answer the physics question?</a>
-<ul class="sectlevel2">
-<li><a href="#_know_the_shape_and_mass_of_your_detector">Know the shape and mass of your detector</a></li>
-<li><a href="#_know_the_livetime_of_your_experiment">Know the livetime of your experiment</a></li>
-<li><a href="#_record_what_your_detectors_see">Record what your detectors see</a></li>
-</ul>
-</li>
+<li><a href="#_what_do_we_need_to_answer_the_physics_question">What do we need to answer the physics question?</a></li>
 <li><a href="#_writing_your_first_daq">Writing your first DAQ</a></li>
+<li><a href="#_midas_daq_terms_midas_uses">MIDAS DAQ: terms MIDAS uses</a></li>
+<li><a href="#_the_end">The End</a></li>
 </ul>
 </div>
 </div>
 <div id="content">
 <div id="preamble">
 <div class="sectionbody">
-<div class="paragraph">
-<p>Record data and explore your world.</p>
+<div class="imageblock">
+<div class="content">
+<img src="../phonon_detectors/images/PA090054.JPG" alt="PA090054" width="900">
+</div>
+<div class="title">Figure 1. Record data and explore your world.</div>
 </div>
 </div>
 </div>
@@ -476,15 +475,18 @@ What units should our intrepid physicists use??
 </div>
 </div>
 <div class="sect2">
-<h3 id="_know_the_livetime_of_your_experiment">Know the livetime of your experiment</h3>
+<h3 id="_know_the_livetime_of_your_experiment_daq">Know the livetime of your experiment &#8592; DAQ!</h3>
 <div class="paragraph">
-<p>Incredibly simple for some experiments; moderately complex for CDMS.</p>
+<p>Incredibly simple for some experiments; moderately complex for CDMS.  Not discussed in this talk.</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="_record_what_your_detectors_see">Record what your detectors see</h3>
+<h3 id="_record_what_your_detectors_see_daq">Record what your detectors see &#8592; DAQ!</h3>
 <div class="paragraph">
-<p>How you do this depends on the physics question you&#8217;re asking and your detectors.  There are three basic styles of recording:</p>
+<p>The main focus of this talk.</p>
+</div>
+<div class="paragraph">
+<p>How you do this depends on the physics question you&#8217;re asking and your detectors.  There are three basic ways to record data:</p>
 </div>
 <div class="ulist">
 <ul>
@@ -495,13 +497,13 @@ What units should our intrepid physicists use??
 <p>continuous recording</p>
 </li>
 <li>
-<p>selective recording</p>
+<p>selective recording &#8592; CDMS uses this!</p>
 </li>
 </ul>
 </div>
 <div class="imageblock">
 <div class="content">
-<img src="selective_recording.png" alt="selective recording" width="500">
+<img src="selective_recording.png" alt="selective recording" width="900">
 </div>
 </div>
 </div>
@@ -516,7 +518,7 @@ What units should our intrepid physicists use??
 <div class="ulist">
 <ul>
 <li>
-<p><span class="line-through">you&#8217;ll want a start button</span> ignore - distration!</p>
+<p><span class="line-through">you&#8217;ll want a start button</span> ignore - distraction!</p>
 </li>
 <li>
 <p><span class="line-through">and of course a stop button</span> ignore - distraction!</p>
@@ -546,10 +548,45 @@ What units should our intrepid physicists use??
 </div>
 </div>
 </div>
+<div class="sect1">
+<h2 id="_midas_daq_terms_midas_uses">MIDAS DAQ: terms MIDAS uses</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Some terms used in this talk are common to everyone in the DAQ community (livetime, readout electronics).</p>
+</div>
+<div class="paragraph">
+<p>CDMS uses custom language for the readout electronics: cold hardware, and warm hardware.</p>
+</div>
+<div class="paragraph">
+<p>MIDAS uses specialized language to describe the different components of its DAQ.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="MIDAS_DAQ.png" alt="MIDAS DAQ" width="900">
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_the_end">The End</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>This talk focuses on the "record the data" job of data acquisition.  It ignores the "know the livetime" piece entirely!</p>
+</div>
+<div class="paragraph">
+<p>You should now understand that
+* MIDAS is a set of data acquisition programs.  It operates by using a database that triggers functions when we change its values.
+* MIDAS calls this database the "Online Database", or "ODB".
+* The MIDAS program mhttpd gives us access to the ODB.
+* The MIDAS program mlogger is responsible for writing data to disk.
+* We have to write a program that talks to our readout hardware.  MIDAS calls such a program a "frontend".</p>
+</div>
+</div>
+</div>
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2016-10-20 10:31:10 Central Daylight Time
+Last updated 2016-10-20 11:34:00 Central Daylight Time
 </div>
 </div>
 </body>
