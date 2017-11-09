@@ -206,7 +206,7 @@ talk.master_path_map = {
     "short_title": "coldfinger fridge",
     "path_list": ["CDMS"],
     "content": "<p><emph>It took two years, and you never doubted it would work.<emph></p>"
-      + "<figure><img src='../cdms_intro/fridge_icebox_align.svg'><figcaption>The fridge at Soudan gets the 'fridge stuff' out of the way so the detectors (black rectangles, center) can be surrounded with plastic and lead shielding.  This image is color-coded: red indicates the searing heat of room temperature, while black indicates the incredibly-cold 50 mK.</figcaption></figure>"
+      + "<figure><img src='../cdms_intro/fridge_icebox_align.PNG'><figcaption>The fridge at Soudan gets the 'fridge stuff' out of the way so the detectors (black rectangles, center) can be surrounded with plastic and lead shielding.  This image is color-coded: red indicates the searing heat of room temperature, while black indicates the incredibly-cold 50 mK.</figcaption></figure>"
   },
   "ReadoutElectronics": {
     "id": "ReadoutElectronics",
