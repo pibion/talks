@@ -12,6 +12,7 @@ talk.master_path_map = {
     "path_amy": "DetectorTime",
     "content": "<p><emph>It seemed so straightforward.</emph>  Surely we could assume that in galaxies, the mass is directly proportional to the light?</p>"
                + "<p>But this assumption leads to ... complete disagreement with the data.</p>"
+               + "<figure class='flexy'><img style='height: 300px;' src='hubble_friday_05132016.jpg'><figcaption>We have two ways to estimate mass in a galaxy: (1) light and (2) gravity.</figcaption>"
                + "<figure class='flexy'><img style='height: 350px;' src='images/RotationCurve_2403.png'><figcaption>The rotation speed of visible matter in galaxies (black dots) dramatically disagrees from our prediction (dotted, blue line).  From <a href='http://arxiv.org/abs/1210.0529v4'>arxiv.org/abs/1210.0529v4</a></figcaption></figure>"
   },
 
@@ -22,7 +23,7 @@ talk.master_path_map = {
     "path_list": [],
     "content": "<p><emph>Once we realized neutrinos have mass,</emph> it made a lot of sense to consider them for Dark Matter candidates.</p>"
       + "<aside>To qualify as a Dark Matter candidate, you must (1) have mass and (2) not shine.</aside>"
-      + "<p>But if you try to simulate our universe using neutrinos as Dark Matter, you'll have trouble: as your simulation runs, you should see matter clump into galaxies and groups of galaxies.  With neutrinos as your Dark Matter, matter stays far too evenly distributed.</p>"
+      //+ "<p>But if you try to simulate our universe using neutrinos as Dark Matter, you'll have trouble: as your simulation runs, you should see matter clump into galaxies and groups of galaxies.  With neutrinos as your Dark Matter, matter stays far too evenly distributed.</p>"
       + "<p>The problem is that neutrinos move too fast - they zing around at nearly the speed of light.  We call neutrinos, 'hot dark matter'.  And to reproduce our galactic structure, we need 'cold dark matter.'</p>"
       + "<figure class='flexy'><img src='images/seqD_063a_half.jpg'><figcaption>An impressively wide array of measurements tell us that matter in our universe clumps into strands of a 'cosmic web'.  This image shows the structure of matter in a simulated universe.  The scale is vast - each point of light is an entire galaxy.  From the <a href='http://wwwmpa.mpa-garching.mpg.de/galform/virgo/millennium/'>Millenium Simulation</a>.</figcaption></figure>"
   },
@@ -110,6 +111,7 @@ talk.master_path_map = {
     "short_title": "Background? Bring it.",
     "path_list": [],
     "content": "<p><emph>What if the number of WIMPs I see in my detector changed, predictably, over time?</emph>  That might make it possible to see the WIMP signal, even against so much background signal.</p>"
+      + " <figure style='height:450px'><img src='DAMA.PNG'><figcaption>And look!  <emph>Something</emph> is changing in this detector over time.  Data from DAMA, retrieved from https://arxiv.org/pdf/1407.1052.pdf.</figcaption></figure>"
       + "<p>And this is actually quite reasonable!</p>"
       + "<p>We expect Dark Matter to rotate about the center of the galaxy just like the visible matter does.  You can picture rotating streams of Dark Matter, moving right along with the center of our solar system - the sun.</p>"
       + "<p>While the sun always moves with the Dark Matter stream, the earth does not.  In one year, we circle the sun, spending half our time moving with the Dark Matter stream, and half our time moving against it.</p>"
@@ -175,7 +177,8 @@ talk.master_path_map = {
       + "<section id='ionization-tab'>"
       + "<p>Ionization refers to electrons, kicked free from their atoms.</p>"
       + "<p>Kicking electrons free is another way a particle can deposit energy in the detector.</p>"
-      + "<p>Ionization is an important part of the CDMS detectors - we use it to select WIMP-like eventsfrom a sea of background events.  This talk does not discuss ionization in detail, though, mostly becuase the ionization sensors aren't as tricky as the phonon sensors.</p>"
+      + "<p>Ionization is an important part of the CDMS detectors - we use it to select WIMP-like events from a sea of background events.  This talk does not discuss ionization in detail, though, mostly becuase the ionization sensors aren't as tricky as the phonon sensors.</p>"
+      + " <figure style='height:400px'><img src='detector_model.png'><figcaption>Ionization is an important part of the CDMS detectors - we use it to select WIMP-like events from a sea of background events.  This talk does not discuss ionization in detail, though, mostly becuase the ionization sensors aren't as tricky as the phonon sensors.</figcaption></figure>"
       + "</section>"
 
       + "<section id='superconductivity-tab'>"
@@ -236,6 +239,7 @@ talk.master_path_map = {
     "short_title": "shield out the boring radiation",
     "path_list": ["CDMS"],
     "content": "<p>When building a WIMP detector, there's a short list of particles you need to worry about: gammas and neutrons.  Lead shields out gammas quite well, and plastic shields out neutrons (low energy neutrons, at least) well.</p>"
+      + " <figure style='height:400px'><img src='../cdms_intro/03_polyOff.jpg'><figcaption>A 5-ton crane helps us encapsulate our detectors in heavy layers of lead and plastic.</figcaption></figure>"
   },
   "Soudan": {
     "id": "Soudan",

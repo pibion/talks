@@ -23,7 +23,7 @@ div.content {
   display: flex;
   flex-direction: column;
   align-items: stretch;
-  width: 100ex;
+  width: 150ex;
   height: 100%;
 }
 div.options {
