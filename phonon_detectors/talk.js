@@ -157,7 +157,7 @@ talk.master_path_map = {
 
       + "<section id='detector-tab'>"
       + "<div class='flex-container'>"
-      + "<figure><img src='../cdms_intro/TES_circuit.svg'><figcaption>The variable resistor (highlighted) represents the tungsten wires on the surface of the detector</figcaption></figure>"
+      + "<figure><img src='../cdms_intro/phonon_circuit.svg'><figcaption>The variable resistor (highlighted) represents the tungsten wires on the surface of the detector</figcaption></figure>"
       + "<ol><li>A neutron interacts with the detector, jostling the crystal lattice.</li>"
       + "<li>The movement of the crystal lattice heats the small tungsten wires on the surface.</li>"
       + "<li>As the tungsten wires warm up, their resistance increases.</li>"
@@ -273,7 +273,7 @@ talk.master_path_map = {
     "title": "Lots of hard work, two plots.",
     "path_list": [],
     "content": "<div class='bss-slides'>"
-          + "<figure><img style='height:500px;' src='../cdms_intro/yield_bands_402.svg'><figcaption>From DOI: 10.1103/PhysRevD.92.072003</figcaption></figure>"
+          + "<figure><img style='height:500px;' src='../cdms_intro/c58r/figures/yield_bands_402.svg'><figcaption>From DOI: 10.1103/PhysRevD.92.072003</figcaption></figure>"
                 + "<figure><img src='../cdms_intro/c58r/figures/c58r_Worldlimits.svg'><figcaption>From DOI: 10.1103/PhysRevD.92.072003</figcaption></figure>"
     + "</div>"
   }
